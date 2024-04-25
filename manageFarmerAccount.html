@@ -1,0 +1,200 @@
+
+<html> 
+	<head>   
+		<title> Farmer </title> 
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  -->
+			<script src="https://kit.fontawesome.com/e8ada9ffa6.js" crossorigin="anonymous"></script>	<!--  	-->
+			<link rel="stylesheet" href="w3.css">
+		<style>
+			aside {	 color: #fff;		 				 width: 22%;			  padding-left: 20px;					
+					border-top-right-radius: 80px;		 height: 100vh;		  	  float: left;
+					background-image: linear-gradient(30deg , #0048bd, #44a7fd);				  
+				}
+
+				
+				#logout {	position:absolute;		left:20px;		bottom:10px;		}
+				aside a {	font-size: 17px;	 color: #fff;		 		 display: block;		  padding: 12px;
+						padding-left: 17px;		 text-decoration: none;  	-webkit-tap-highlight-color:transparent;
+				}
+				aside a.active  {	  		color: #3f5efb;				  background: #fff;				  outline: none;
+				  position: relative;	background-color: #fff;		  border-top-left-radius: 20px;	  border-bottom-left-radius: 20px;
+				}
+				/* aside a.active::after {  	content: "";		  		position: absolute;
+				  background-color: transparent;	bottom: 100%;		  right: 0;
+				  height: 45px;		  			  	width: 25px;
+				  border-top-right-radius: 18px;			 		 box-shadow: 0 -20px 0 0 #fff;
+				}				
+				aside a.active::before {  content: "";		  position: absolute;	  background-color: transparent;
+				  top: 38px;			  right: 0;			  height: 35px;			  width: 35px;
+				  border-top-right-radius: 18px;			  box-shadow: 0 -20px 0 0 #fff; 
+				}
+				*/
+				aside a:hover {	  		color: #3f5efb;				  background: #eee;				  outline: none;
+				  position: relative;	background-color: #eee;		  border-top-left-radius: 20px;	  border-bottom-left-radius: 20px;
+				}
+				
+				aside a i {				  margin-right: 5px;				}
+				aside a:hover::after {	  			content: "";		  position: absolute;
+				  background-color: transparent;	bottom: 100%;		  right: 0;
+				  height: 45px;		  			  	width: 45px;		  border-bottom-right-radius: 18px;
+				  box-shadow: 0 20px 0 0 #eee;
+				}
+				aside a:hover::before {	  content: "";		  position: absolute;	  background-color: transparent;
+				  top: 38px;			  right: 0;			  height: 35px;			  width: 35px;
+				  border-top-right-radius: 18px;			  box-shadow: 0 -20px 0 0 #eee;
+				}
+				
+				aside p {	  margin: 0;		  padding: 40px 0;				}
+				
+				body {		  font-family: 'Roboto';		  width: 100%;		  height: 100vh;		  margin: 0;	padding: 0; 	}
+				.mainContent { float: right;   width: 77%;  height: 100vh;	align-items: left; background: transparent; }
+
+				
+		</style> 
+		
+		
+	</head> 
+	
+		<aside>
+		  <p>  
+			 <img src="images/user.png" class="w3-circle w3-margin-right" style="width:46px">
+			 Welcome,  <b> UserName: </b>
+		  
+		  </p>
+		  <a href="home.html" >   
+			<i class = "fa fa-home"  aria-hidden="true"></i>
+			Overview
+		  </a>
+		  <a href="manageFarmer.html"  >   			
+			<i class = "fa fa-address-card"  aria-hidden="true"></i>
+			My Profile
+		  </a>
+		  <a href="manageFarm.html">
+			<i class="fa fa-tree" aria-hidden="true"></i>
+			Manage Farm
+		  </a>
+		  <a href="#IE" >
+			<i class="fa fa-money-check-alt" aria-hidden="true"></i>		<!--	fa-handshake-o	, fa-bank	-->
+			Income-Expense
+		  </a>
+		  <a href="#Tasks">
+			<i class="fa fa-tasks"			aria-hidden="true"></i>
+			Tasks
+		  </a>
+		  <a href="#Subscriptions">
+			<i class="fa fa-users fa-fw" aria-hidden="true"></i>
+			Subscriptions
+		  </a>
+		  <a href="#Reports">
+			<i class="fa fa-book" aria-hidden="true"></i>
+			Reports
+		  </a>
+		  <a   href="#UserAccount"   class = 'active'>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			Manage Account         
+		  </a>	
+		  <a href="#Help">
+			<i class="fa fa-info-circle" aria-hidden="true"></i>
+			Help
+		  </a>	  
+		  <a   href="#Logout">
+			<i class="fa fa-power-off" aria-hidden="true"></i>
+			Logout         
+		  </a>
+		</aside>
+		<div class ='mainContent'> 
+			<div class="w3-main">
+
+				  <!-- Header -->
+				<header class="w3-container" style="padding-top:10px">
+					<h5><b><i class="fa fa-dashboard"></i> Manage Account</b></h5>
+				</header>
+
+				<div id = 'menus' class="w3-row-padding" style = "margin-bottom:12px; ">
+					<div class="w3-quarter">
+					  <div class="w3-container w3-red w3-padding-16">
+						<div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+						<div class="w3-right">
+						  <h3>52</h3>
+						</div>
+						<div class="w3-clear"></div>
+						<h4>Log Ins</h4>
+					  </div>
+					</div>
+					<div class="w3-quarter">
+					  <div class="w3-container w3-blue w3-padding-16">
+						<div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+						<div class="w3-right">
+						  <h3>99</h3>
+						</div>
+						<div class="w3-clear"></div>
+						<h4>Account Updates</h4>
+					  </div>
+					</div>
+					<div class="w3-quarter">
+					  <div class="w3-container w3-teal w3-padding-16">
+						<div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+						<div class="w3-right">
+						  <h3>23</h3>
+						</div>
+						<div class="w3-clear"></div>
+						<h4>Shares</h4>
+					  </div>
+					</div>
+					<div class="w3-quarter">
+					  <div class="w3-container w3-orange w3-text-white w3-padding-16">
+						<div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+						<div class="w3-right">
+						  <h3>50</h3>
+						</div>
+						<div class="w3-clear"></div>
+						<h4>Users</h4>
+					  </div>
+					</div>
+				</div>
+				
+				<div id = "farmerFormDiv" class = 'w3-container' > 
+					<form id ='farmerForm' class="w3-container w3-card-4">
+						<h3>Account Details </h3>
+						<div class = "w3-row w3-row-padding">
+							<div class = "w3-col s6 m6 l6 w3-row-padding">
+								<input class="w3-input" type="text" required>
+								<label>User Name</label>
+							</div>
+							<div class = "w3-col  s6 m6 l6 w3-row-padding">
+								<input class="w3-input" type="email" required>
+								<label>Email</label>
+							</div>							
+						</div>
+						<div class = "w3-row w3-row-padding">
+							<div class = "w3-col s6 m6 l6 w3-row-padding">
+								<input class="w3-input" type="password" required>
+								<label>Old Password</label>
+							</div>
+							<div class = "w3-col  s6 m6 l6 w3-row-padding">
+								<input class="w3-input" type="password" required>
+								<label>New Password</label>
+							</div>							
+						</div>
+					  
+						
+						<div class="w3-row w3-row-padding"  style = "margin:5px; " >
+							<button class="w3-button w3-round-large  w3-aqua  w3-hover-purple w3-large w3-border-blue  w3-right " style = " margin: 2px; ">Update</button>  
+							<button class="w3-button w3-round-large  w3-orange  w3-hover-purple w3-large w3-border-blue w3-right "  style = " margin: 2px; ">Refresh</button>  
+							
+						</div> 
+					
+					</form>
+
+				</div>
+
+			</div>
+		</div> 
+
+		
+	</body> 
+	
+	
+	</html> 
